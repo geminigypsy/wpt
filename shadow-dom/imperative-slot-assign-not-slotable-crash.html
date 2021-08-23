@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<link rel=author href="mailto:jarhar@chromium.org">
+<link rel=help href="https://bugs.chromium.org/p/chromium/issues/detail?id=1240783">
+
+<slot id=slot>
+<object id=object>
+<script>
+onload = () => {
+  const processingInstruction = document.createProcessingInstruction(undefined, undefined);
+  document.getElementById('slot').assign(processingInstruction);
+  document.getElementById('object').appendChild(processingInstruction);
+}
+</script>
